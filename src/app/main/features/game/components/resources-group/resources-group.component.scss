@@ -1,0 +1,77 @@
+.resources-group-container {
+	display: flex;
+	flex-direction: column;
+	gap: var(--cards-space);
+
+	.resources-group {
+		width: 100%;
+		max-width: 100%;
+		height: 200px;
+		border: 6px solid var(--sw-color);
+		padding: 5px;
+		overflow: scroll;
+		display: grid;
+		grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+		gap: 5px;
+	
+		.resource-container {
+			position: relative;
+	
+			.characters {
+				background: url("/assets/images/character-avatar.jpeg");
+			}
+	
+			.starships {
+				background: url("/assets/images/starships-avatar.jpeg");
+			}
+	
+			.resource {
+				opacity: .5;
+				border: 2px solid var(--sw-color);
+				aspect-ratio: 1;
+				background-size: cover;
+				background-position: center;
+				transition: opacity .3s;
+				cursor: pointer;
+			}
+	
+			.name {
+				position: absolute;
+				padding: 4px 6px 2px 6px;
+				text-align: center;
+				font-size: 12px;
+				font-weight: 600;
+				left: 2px;
+				right: 2px;
+				bottom: 2px;
+				background-color: rgba(255, 255, 255, 0.5);
+				color: black;
+				transition: background-color .3s;
+				white-space: nowrap;
+				overflow: hidden;
+				text-overflow: ellipsis;
+			}
+		}
+	
+		.resource-container:hover,
+		.resource-container.selected,
+		.resource-container.selected.disabled:hover {
+			.resource {
+				opacity: 1;
+			}
+			.name {
+				background-color: white;
+			}
+		}
+
+		.resource-container.disabled:hover {
+			.resource {
+				cursor: not-allowed;
+				opacity: .5;
+			}
+			.name {
+				background-color: rgba(255, 255, 255, 0.5);
+			}
+		}
+	}
+}

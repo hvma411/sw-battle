@@ -1,0 +1,14 @@
+<div class="resources-group-container">
+	<div class="resources-group">
+		@for (resource of resources; track $index) {
+			<div #resourceItem
+				class="resource-container"
+				(click)="selectResource(resource)"
+				[ngClass]="{ 'selected': selectedResource?.url === resource.url, 'disabled': selectingResourceDisabled}"
+			>
+				<div class="resource" [ngClass]="{ 'characters': fight === _Fight.characters, 'starships': fight === _Fight.starships}"></div>
+				<h3 class="name">{{ resource.name }}</h3>
+			</div>
+		}
+	</div> 
+</div>

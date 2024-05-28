@@ -1,0 +1,5 @@
+<div class="opponent-info" [ngClass]="resourcesOptionsPosition">
+	<button class="random-resource-button option" (click)="randomizeResource()">RANDOMIZE RESOURCE</button>
+	<div class="option">WINS: {{ opponentWins }}</div>
+	<div class="option">{{ utilsService.getOpponent(playerVs!, opponent!) }}</div>
+</div>

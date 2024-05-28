@@ -1,0 +1,25 @@
+<div class="star-wars-intro">
+	<p class="initial-content">A LONG TIME AGO IN A GALAXY FAR, FAR AWAY...</p>
+	<div class="main-logo">
+    	<img src="assets/images/sw-logo.svg" />
+  	</div>
+  	<div class="main-content">
+    	<div class="title-content">
+			<p class="title">STAR WARS BATTLE</p>
+			<p class="content-body">
+				IT IS A TIME OF GALACTIC COMPETITION.
+				THE GALAXY'S GREATEST HEROES AND MIGHTIEST STARSHIPS PREPARE TO FACE OFF IN AN EPIC DUEL OF STRENGTH AND STRATEGY.
+				USING THE MYSTICAL POWERS OF THE SWAPI, PLAYERS SUMMON LEGENDARY CHARACTERS AND POWERFUL STARSHIPS TO DETERMINE WHO IS TRULY THE STRONGEST.
+				IN THIS BATTLE OF TITANS, ONLY ONE CAN EMERGE VICTORIOUS.
+				WILL THE CHAMPION BE A FEARLESS HERO WITH UNPARALLELED MASS, OR A FORMIDABLE STARSHIP WITH A CREW UNMATCHED IN NUMBER? PREPARE YOURSELF FOR THE ULTIMATE SHOWDOWN.
+				THE FATE OF THE GALAXY RESTS IN YOUR HANDS.
+				MAY THE FORCE BE WITH YOU!
+			</p>
+    	</div>
+	</div>
+	@if (isButtonVisible) {
+		<a [routerLink]="_AppRoute.game" class="start-game-button">
+			START GAME
+		</a>
+	}
+</div>

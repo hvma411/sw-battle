@@ -1,0 +1,8 @@
+<div class="game-initiation-step-header">
+	@if (backButtonEnabled) {
+		<div class="back-button" (click)="goBack()">
+			<img src="assets/icons/arrow-left.svg" alt="Back button icon">
+		</div>
+	}
+	<h1 class="game-initiation-step-name">{{ name }}</h1>
+</div>

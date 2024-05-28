@@ -1,0 +1,25 @@
+<div class="select-resources-container">
+	<div class="select-choice-cards-container">
+		<app-choice-card [choiceCard]="_ChoiceCard.resourcePreview"
+			labelPosition="right"
+			[opponent]="_Opponent.opponent1"
+			[fight]="fight"
+			[playerVs]="playerVs"
+			[resource]="selectedResources?.opponent1"
+		/>
+		<app-choice-card [choiceCard]="_ChoiceCard.resourcePreview"
+			labelPosition="left"
+			[opponent]="_Opponent.opponent2"
+			[fight]="fight"
+			[playerVs]="playerVs"
+			[resource]="selectedResources?.opponent2"
+		/>
+	</div>
+	<div class="resources-container">
+		<app-resources-group resourcesOptionsPosition="right" [opponent]="_Opponent.opponent1" [resources]="getResourcesToDisplay()" />
+		<app-resources-group resourcesOptionsPosition="left" [opponent]="_Opponent.opponent2" [resources]="getResourcesToDisplay()" />
+	</div>
+	<button class="fight-button" (click)="openFightModal()">
+		FIGHT
+	</button>
+</div>

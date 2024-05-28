@@ -1,0 +1,26 @@
+.opponent-info {
+	width: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: flex-end;
+	gap: var(--cards-space);
+
+	.option {
+		border: 2px solid var(--sw-color);
+		padding: 10px;
+		background: transparent;
+		font-weight: 600;
+		font-size: 16px;
+		color: var(--light-text-color);
+	}
+
+	.random-resource-button:hover {
+		background: var(--sw-color);
+		color: black;
+		cursor: pointer;
+	}
+}
+
+.left {
+	flex-direction: row-reverse;
+}

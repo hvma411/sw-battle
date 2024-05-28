@@ -1,0 +1,35 @@
+.select-resources-container {
+	width: 100%;
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	gap: var(--cards-space);
+
+	.resources-container {
+		width: 100%;
+		height: auto;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		gap: var(--cards-space);
+	}
+
+	.fight-button {
+		color: var(--sw-color);
+		border: 6px solid var(--sw-color);
+		padding: 20px;
+		background: transparent;
+		text-align: center;
+		font-size: 1.5rem;
+		font-weight: 400;
+		text-decoration: none;
+		cursor: pointer;
+		transition: all .3s;
+	}
+
+	.fight-button:hover {
+		background-color: var(--sw-color);
+		border-color: var(--sw-color);
+		color: black;
+	}
+}

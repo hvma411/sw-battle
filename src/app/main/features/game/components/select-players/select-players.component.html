@@ -1,0 +1,4 @@
+<div class="select-choice-cards-container">
+	<app-choice-card [choiceCard]="_ChoiceCard.playerVsPlayer" labelPosition="right" (action)="updateGameInitiationStep(_ChoiceCard.playerVsPlayer)"></app-choice-card>
+	<app-choice-card [choiceCard]="_ChoiceCard.playerVsComputer" labelPosition="left" (action)="updateGameInitiationStep(_ChoiceCard.playerVsComputer)"></app-choice-card>
+</div>

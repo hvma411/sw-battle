@@ -1,0 +1,20 @@
+<div class="game-initiation-container">
+	@switch (gameInitiationStep) {
+		@case (_GameInitiationStep.fightType) {
+			<app-game-initiation-step-header [backButtonEnabled]="backButtonEnabled" [currentStep]="gameInitiationStep" name="SELECT FIGHT TYPE"></app-game-initiation-step-header>
+			<app-select-fight-type></app-select-fight-type>
+		}
+		@case (_GameInitiationStep.players) {
+			<app-game-initiation-step-header [backButtonEnabled]="backButtonEnabled" [currentStep]="gameInitiationStep" name="SELECT PLAYERS"></app-game-initiation-step-header>
+			<app-select-players></app-select-players>
+		}
+		@case (_GameInitiationStep.resource) {
+			<app-game-initiation-step-header [backButtonEnabled]="backButtonEnabled" [currentStep]="gameInitiationStep" name="SELECT RESOURCES"></app-game-initiation-step-header>
+			<app-select-resources></app-select-resources>
+		}
+		@default {
+			<app-game-initiation-step-header [backButtonEnabled]="backButtonEnabled" [currentStep]="gameInitiationStep" name="SELECT FIGHT TYPE"></app-game-initiation-step-header>
+			<app-select-fight-type></app-select-fight-type>
+		}
+	}
+</div>

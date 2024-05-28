@@ -1,0 +1,22 @@
+<div class="choice-card-container" [ngClass]="labelPosition">
+	<div class="choice-card"
+		[class.preview]="choiceCard === _ChoiceCard.resourcePreview"
+		[ngStyle]="getBackgroundImageStyles()"
+		(click)="action.emit()"
+	>
+		<div class="choice-card--label">{{ getLabel() }}</div>
+		@if (choiceCard === _ChoiceCard.resourcePreview) {
+			<div class="choice-card--detail">
+				{{ getFightAttributeToDisplay() }}
+			</div>
+		}
+	</div>
+	@if (choiceCard === _ChoiceCard.resourcePreview) {
+		<app-opponent-info
+			[resourcesOptionsPosition]="labelPosition"
+			[playerVs]="playerVs"
+			[opponent]="opponent"
+			[fight]="fight"
+		/>
+	}
+</div>

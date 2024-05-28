@@ -1,0 +1,13 @@
+<div class="fight-modal-content">
+	<ng-container [ngTemplateOutlet]="fightInProgress ? fighting : fightOver"></ng-container>
+</div>
+
+<ng-template #fighting>
+	<div class="status">FIGHTING</div>
+	<mat-spinner></mat-spinner>
+</ng-template>
+
+<ng-template #fightOver>
+	<div class="status">FIGHT IS OVER</div>
+	<div class="result">{{ isDraw ? 'DRAW' : 'WINNER IS: ' + utilsService.getOpponent(data.playerVs, winnerOpponent!) }}</div>
+</ng-template>
